@@ -22,4 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "Forecasts_App"
 include(":app")
 include(":core", ":core:sharedData",":core:database", ":core:utils", ":core:ui", ":core:network")
-include(":features", ":features:home")
+include(":features", ":features:home", ":features:Details")

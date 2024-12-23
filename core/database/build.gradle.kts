@@ -22,4 +22,10 @@ dependencies {
 
     "implementation"(libs.bundles.room)
     ksp(libs.roomCompiler)
+
+    "androidTestImplementation"(libs.kotlinx.coroutines.test)
+    "androidTestImplementation"(libs.androidx.junit)
+    "androidTestImplementation"(libs.core.test.ktx)
+    "androidTestImplementation"(libs.androidx.room.testing)
+    "kspAndroidTest"( libs.roomCompiler)
 }

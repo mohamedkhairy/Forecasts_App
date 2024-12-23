@@ -1,9 +1,13 @@
 [versions]
 agp = "8.7.2"
+androidxCoreKtx = "1.5.0"
+androidxJunit = "1.1.5"
+coreKtxVersion = "1.5.0"
 kotlin = "2.0.21"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
+kotlinxCoroutinesTest = "1.7.3"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
 composeBom = "2024.04.01"
@@ -16,6 +20,7 @@ ktorVersion = "2.3.11"
 appcompat = "1.6.1"
 ksp = "2.0.21-1.0.27"
 mockk = "1.13.5"
+roomTesting = "2.5.2"
 secrets = "2.0.1"
 
 # Arch Components
@@ -108,6 +113,7 @@ serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", v
 room = {  module = "androidx.room:room-runtime" , version.ref = "roomVersion" }
 roomKtx = {  module = "androidx.room:room-ktx" , version.ref = "roomVersion" }
 roomCompiler = {  module = "androidx.room:room-compiler" , version.ref = "roomVersion" }
+androidx-room-testing = { module = "androidx.room:room-testing", version.ref = "roomTesting" }
 
 
 #COIL
@@ -137,6 +143,7 @@ turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine-version"
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 ktor-client-mock = { module = "io.ktor:ktor-client-mock", version.ref = "ktorVersion" }
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+core-test-ktx = { module = "androidx.test:core-ktx", version.ref = "androidxCoreKtx" }
 
 
 mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockito-android-version" }
@@ -193,6 +200,7 @@ unit-test = [
     "junit-kotlin",
     "core-test",
     "turbine",
+    "core-test-ktx",
     "mockito-inline",
     "mockk"]
 

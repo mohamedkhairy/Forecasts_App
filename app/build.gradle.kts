@@ -68,7 +68,7 @@ dependencies {
     implementation(project(":core:ui"))
     implementation(project(":features:home"))
 //    implementation(project(":features:Details"))
-
+    
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

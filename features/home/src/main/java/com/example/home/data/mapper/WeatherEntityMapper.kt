@@ -28,10 +28,10 @@ class WeatherEntityMapper @Inject constructor() :
    private fun mapMainTemp(main: Main): MainEntity=
        main.run {
            MainEntity(
-               humidity = humidity,
-               temp = temp,
-               tempMax = tempMax,
-               tempMin = tempMin
+               humidity = "$humidity",
+               temp = "$temp",
+               tempMax = "$tempMax",
+               tempMin = "$tempMin"
            )
        }
 

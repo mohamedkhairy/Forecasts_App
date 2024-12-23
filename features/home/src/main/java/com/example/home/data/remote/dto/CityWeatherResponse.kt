@@ -11,11 +11,7 @@ data class CityWeatherResponse(
     @SerialName("clouds")
     val clouds: Clouds?,
     @SerialName("cod")
-    val cod: String?,
-//    @SerialName("code")
-//    val code: String?,
-//    @SerialName("message")
-//    val message: String?,
+    val cod: Int?,
     @SerialName("coord")
     val coord: Coord?,
     @SerialName("dt")

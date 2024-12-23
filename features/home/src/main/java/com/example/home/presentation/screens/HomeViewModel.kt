@@ -31,8 +31,6 @@ open class HomeViewModel @Inject constructor(
     open val resultUiState: StateFlow<UiState<CityWeather?>> =
         searchQuery.flatMapLatest { city ->
             cityWeatherUseCase(city)
-        }.catch {
-            it.printStackTrace()
         }.stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5_000),

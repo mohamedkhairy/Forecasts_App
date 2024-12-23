@@ -29,10 +29,7 @@ class CityWeatherRepositoryImp @Inject constructor(
     override suspend fun getCityWeather(city: String?): Flow<CityWeather?> =
         cachingHandler(
             remoteSource = {
-                city?.let {
-                    Log.d("xxx get", "remote")
-                    service.callCityWeather(it)
-                }
+                city?.let { service.callCityWeather(it) }
             },
             saveResult = {
                 entityMapper.map(it)?.let { weatherEntity ->

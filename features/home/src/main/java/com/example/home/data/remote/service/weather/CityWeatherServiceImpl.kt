@@ -13,21 +13,8 @@ import javax.inject.Inject
 class CityWeatherServiceImpl @Inject constructor(val httpClient: HttpClient) :
     CityWeatherService {
 
-    override suspend fun callCityWeather(city: String): CityWeatherResponse? {
-//        try {
-            val res =
+    override suspend fun callCityWeather(city: String): CityWeatherResponse? =
                 httpClient.get(Endpoints.WEATHER_API(city))
                     .body<CityWeatherResponse?>()
-
-            Log.d("xxx", res.toJsonString())
-
-            return res
-//        } catch (e: Exception) {
-//            Log.d("xxx", "Eception")
-//
-//            e.printStackTrace()
-//            throw NotImplementedError()
-//        }
-    }
 
 }

@@ -199,7 +199,7 @@ internal fun CityWeatherResultView(
         )
 
         Text(
-            text = "Humidity: ${cityWeather.main?.tempMin}",
+            text = "Humidity: ${cityWeather.main?.humidity}",
             color = MaterialTheme.colorScheme.primary,
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,

@@ -35,7 +35,7 @@ open class HomeViewModel @Inject constructor(
             initialValue = UiState.Ideal(),
         )
 
-    fun onSearchQueryChanged(query: String?) {
+    open fun onSearchQueryChanged(query: String?) {
         savedStateHandle[SEARCH_QUERY] = query
     }
 

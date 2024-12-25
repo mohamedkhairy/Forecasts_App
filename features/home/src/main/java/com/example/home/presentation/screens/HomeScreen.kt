@@ -73,7 +73,7 @@ fun HomeSearchScreen(
         content = {
             Column(
                 modifier = Modifier
-                    .testTag("MainBox")
+                    .testTag("MainView")
                     .fillMaxSize()
                     .padding(it)
                     .background(MaterialTheme.colorScheme.background)
@@ -224,6 +224,7 @@ internal fun CityWeatherResultView(
                 .fillMaxWidth()
                 .border(border = BorderStroke(1.dp, Color.LightGray))
                 .padding(16.dp)
+                .testTag("openCityForecast")
                 .clickable {
                     cityWeather.city?.let(openListClick::invoke)
                 }

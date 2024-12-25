@@ -1,6 +1,6 @@
 package com.example.home.fakeData
 
-import com.example.core.sharedData.CityWeather
+import com.example.core.sharedData.home.CityWeather
 import com.example.database.entity.WeatherEntity
 import com.example.home.data.remote.dto.CityWeatherResponse
 import com.example.home.serializeWeatherData
@@ -58,19 +58,8 @@ object CityWeatherValid {
             "    \"cod\": 200\n" +
             "}"
 
-    val emptyCharactersResult = "{\n" +
-            "  \"attributionText\": \"Data provided by Marvel. © 2024 MARVEL\",\n" +
-            "  \"code\": 200,\n" +
-            "  \"emptyData\": {\n" +
-            "    \"count\": 10,\n" +
-            "    \"limit\": 10,\n" +
-            "    \"offset\": 0,\n" +
-            "    \"results\": [],\n" +
-            "    \"total\": 1564\n" +
-            "  },\n" +
-            "  \"status\": \"Ok\"\n" +
-            "}"
 
+    val emptyResult = "{}"
 
 
     val cityWeather = "{\"city\":\"Cairo\",\"cityId\":360630,\"country\":\"EG\",\"main\":{\"humidity\":\"34\",\"temp\":\"292.57\",\"tempMax\":\"292.57\",\"tempMin\":\"292.27\"},\"weather\":[{\"description\":\"sand\",\"icon\":\"http://openweathermap.org/img/wn/50n@2x.png\",\"main\":\"Sand\"}]}"

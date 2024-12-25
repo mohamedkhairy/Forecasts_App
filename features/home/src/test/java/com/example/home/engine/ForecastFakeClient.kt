@@ -58,7 +58,7 @@ class ForecastFakeClient {
                                     }
                                     is ServiceResponseType.EmptyResultList -> {
                                         respond(
-                                            CityWeatherValid.emptyCharactersResult,
+                                            CityWeatherValid.emptyResult,
                                             status = HttpStatusCode.OK,
                                             headers = responseHeaders
                                         )

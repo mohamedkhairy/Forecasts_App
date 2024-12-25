@@ -1,15 +1,11 @@
 package com.example.home.data.mapper
 
-import com.example.core.sharedData.MainTemp
-import com.example.core.sharedData.Weather
-import com.example.core.sharedData.CityWeather
+import com.example.core.sharedData.home.MainTemp
+import com.example.core.sharedData.home.Weather
+import com.example.core.sharedData.home.CityWeather
 import com.example.database.entity.MainEntity
 import com.example.database.entity.WeatherDetailsEntity
 import com.example.database.entity.WeatherEntity
-import com.example.home.data.remote.dto.CityWeatherResponse
-import com.example.home.data.remote.dto.Main
-import com.example.home.data.remote.dto.WeatherResponse
-import com.example.network.remoteBase.WeatherIcons
 import com.example.utils.mapper.BaseMapper
 import javax.inject.Inject
 
@@ -28,7 +24,7 @@ class CityWeatherMapper @Inject constructor() :
         }
 
 
-   private fun mapMainTemp(main: MainEntity): MainTemp=
+   private fun mapMainTemp(main: MainEntity): MainTemp =
        main.run {
            MainTemp(
                humidity = humidity,

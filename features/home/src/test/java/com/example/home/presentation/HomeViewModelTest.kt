@@ -2,7 +2,7 @@ package com.example.home.presentation
 
 import androidx.lifecycle.SavedStateHandle
 import app.cash.turbine.test
-import com.example.core.sharedData.CityWeather
+import com.example.core.sharedData.home.CityWeather
 import com.example.home.domain.useCase.CityWeatherUseCase
 import com.example.home.fakeData.CityWeatherInvalid.invalidCity
 import com.example.home.fakeData.CityWeatherValid.getCityWeather

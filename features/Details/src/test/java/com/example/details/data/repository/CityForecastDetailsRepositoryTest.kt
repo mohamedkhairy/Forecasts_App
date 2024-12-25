@@ -7,8 +7,6 @@ import com.example.details.engine.ForecastFakeClient
 import com.example.details.engine.ServiceResponseType
 import com.example.details.fakeData.CityForecastDetailsValid.getCityForecast
 import com.example.details.fakeData.CityForecastDetailsValid.validCity
-import com.example.utils.core.CachedEmpty
-import com.example.utils.core.NoDataFound
 import com.example.utils.core.isNotNull
 import io.ktor.serialization.JsonConvertException
 import kotlinx.coroutines.Dispatchers
@@ -18,7 +16,6 @@ import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
 import org.junit.After
-import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import kotlin.test.assertEquals

@@ -1,9 +1,6 @@
 package com.example.database.dbManager
 
 import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.DeleteColumn
-import androidx.room.DeleteTable
 import androidx.room.Query
 import androidx.room.Upsert
 import com.example.database.entity.WeatherEntity

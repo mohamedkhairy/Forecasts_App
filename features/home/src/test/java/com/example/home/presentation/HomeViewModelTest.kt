@@ -55,7 +55,7 @@ class HomeViewModelTest {
     @Test
     fun `onSearchQueryChanged updates searchQuery in SavedStateHandle`() {
 
-        // Act
+        // execute
         homeViewModel.onSearchQueryChanged(validCity)
 
         // Assert
@@ -64,10 +64,10 @@ class HomeViewModelTest {
 
     @Test
     fun `resultUiState emits Ideal when initial value`() = runTest(testDispatcher) {
-        // Arrange
+        // setup
         whenever(mockCityWeatherUseCase(any())).thenReturn(flowOf(UiState.Loading(true)))
 
-        // Act
+        // execute
         homeViewModel.resultUiState.test {
 
             //Assert
@@ -80,10 +80,10 @@ class HomeViewModelTest {
 
     @Test
     fun `resultUiState emits Success when use case emits data`() = runTest(testDispatcher) {
-        // Arrange
+        // setup
         whenever(mockCityWeatherUseCase(any())).thenReturn(flowOf(UiState.Success(getCityWeather())))
 
-        // Act
+        // execute
         homeViewModel.onSearchQueryChanged(validCity)
 
         homeViewModel.resultUiState.test {
@@ -97,10 +97,10 @@ class HomeViewModelTest {
 
     @Test
     fun `resultUiState emits CachedEmpty Error when no cached found`() = runTest {
-        // Arrange
+        // setup
         whenever(mockCityWeatherUseCase("")).thenReturn(flowOf(UiState.Error(CachedEmpty())))
 
-        // Act
+        // execute
         homeViewModel.resultUiState.test {
             //Assert
             assertEquals(UiState.Ideal<CityWeather?>(), awaitItem())
@@ -114,10 +114,10 @@ class HomeViewModelTest {
 
     @Test
     fun `resultUiState emits NoDataFound Error when no result found`() = runTest {
-        // Arrange
+        // setup
         whenever(mockCityWeatherUseCase(invalidCity)).thenReturn(flowOf(UiState.Error(NoDataFound(invalidCity))))
 
-        // Act
+        // execute
         homeViewModel.onSearchQueryChanged(invalidCity)
 
         homeViewModel.resultUiState.test {

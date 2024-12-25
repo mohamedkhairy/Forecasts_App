@@ -64,7 +64,7 @@ class CityWeatherRepositoryTest {
 
     @Test
     fun `getCityWeather should return remote data and save to cache`() = runTest(testDispatcher) {
-        // Arrange
+        // setup
         service = ForecastFakeClient.build(
             type = ServiceResponseType.GoodData
         )
@@ -81,18 +81,18 @@ class CityWeatherRepositoryTest {
         val mappedWeather = getCityWeather()
 
 
-        // Act
+        // execute
         val result = repository.getCityWeather(validCity).first()
 
         // Assert
         assert(result.isNotNull())
-        assertEquals(mappedWeather.cityId, result?.cityId) // Verify that the result matches the expected emptyData
-        assertEquals(dao.getLatestWeather().first()?.cityId, mappedEntity.cityId) // Verify that emptyData was saved to the cache
+        assertEquals(mappedWeather.cityId, result?.cityId)
+        assertEquals(dao.getLatestWeather().first()?.cityId, mappedEntity.cityId)
     }
 
     @Test
     fun `getCityWeather should return cached emptyData when remote call fails`() = runTest(testDispatcher) {
-        // Arrange
+        // setup
         service = ForecastFakeClient.build(
             type = ServiceResponseType.Http404
         )
@@ -115,7 +115,7 @@ class CityWeatherRepositoryTest {
 
     @Test
     fun `getCityWeather should throw CachedEmpty when both remote and cache are unavailable`() = runTest(testDispatcher) {
-        // Arrange
+        // setup
         service = ForecastFakeClient.build(
             type = ServiceResponseType.EmptyResponse
         )

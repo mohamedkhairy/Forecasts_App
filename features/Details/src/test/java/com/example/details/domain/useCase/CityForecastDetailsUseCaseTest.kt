@@ -10,7 +10,6 @@ import com.example.details.engine.ServiceResponseType
 import com.example.details.fakeData.CityForecastDetailsValid.getCityForecast
 import com.example.details.fakeData.CityForecastDetailsValid.validCity
 import com.example.utils.core.UiState
-import com.example.utils.core.toJsonString
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.toList

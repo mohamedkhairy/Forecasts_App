@@ -48,7 +48,7 @@ class CityWeatherUseCaseTest {
     }
 
     @Test
-    fun `test MarvelCharactersUseCase with success data`() =
+    fun `test CityWeatherUseCase with success data`() =
         runBlocking {
             // Setup
             service = ForecastFakeClient.build(
@@ -75,7 +75,7 @@ class CityWeatherUseCaseTest {
 
 
     @Test
-    fun `test MarvelCharactersUseCase with failure`() =
+    fun `test CityWeatherUseCase with failure`() =
         runBlocking {
             // Setup
             service = ForecastFakeClient.build(

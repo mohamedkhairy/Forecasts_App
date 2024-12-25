@@ -1,8 +1,8 @@
 package com.example.home.data.mapper
 
+import com.example.core.sharedData.home.CityWeather
 import com.example.core.sharedData.home.MainTemp
 import com.example.core.sharedData.home.Weather
-import com.example.core.sharedData.home.CityWeather
 import com.example.database.entity.MainEntity
 import com.example.database.entity.WeatherDetailsEntity
 import com.example.database.entity.WeatherEntity

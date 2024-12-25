@@ -5,7 +5,6 @@ import com.example.home.data.remote.dto.CityWeatherResponse
 import com.example.home.fakeData.CityWeatherEmpty
 import com.example.home.fakeData.CityWeatherValid
 import com.example.utils.core.jsonParse
-import com.example.utils.core.toJsonString
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Before
@@ -25,7 +24,6 @@ class WeatherEntityMapperTest {
         // setup
         val cityWeatherResponse = CityWeatherValid.getCityWeatherResponse()
 
-        println("xxx ---> ${cityWeatherResponse.toJsonString()}")
         // execute
         val weatherEntity = weatherEntityMapper.map(cityWeatherResponse)
 

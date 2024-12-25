@@ -11,9 +11,9 @@
 <h4> Unit Test<br>
 <h4> Compose UI Test<be>
 <h4> APK --> you can find an APK in the Action completed jobs<be>
-
-
-  
+<h4>
+<h4>secrets.defaults.properties ->The secret file should contain dummy data instead of the real data; however, I provided it here for building the APK.
+<h4>  
 <br>
 <h3> ******* ->  
 <h3>The App module</h3>

@@ -1,4 +1,4 @@
-package com.example.core.sharedData
+package com.example.core.sharedData.home
 
 data class Weather(
     val description: String?,

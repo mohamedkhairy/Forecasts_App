@@ -67,7 +67,7 @@ dependencies {
     implementation(project(":core:utils"))
     implementation(project(":core:ui"))
     implementation(project(":features:home"))
-//    implementation(project(":features:Details"))
+    implementation(project(":features:Details"))
     
 
     testImplementation(libs.junit)

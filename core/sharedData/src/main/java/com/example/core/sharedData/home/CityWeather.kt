@@ -1,4 +1,4 @@
-package com.example.core.sharedData
+package com.example.core.sharedData.home
 
 data class CityWeather(
     val country: String?,

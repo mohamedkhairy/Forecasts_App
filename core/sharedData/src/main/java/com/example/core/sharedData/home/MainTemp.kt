@@ -1,4 +1,4 @@
-package com.example.core.sharedData
+package com.example.core.sharedData.home
 data class MainTemp(
     val humidity: String,
     val temp: String,
